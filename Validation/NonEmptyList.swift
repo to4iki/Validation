@@ -5,9 +5,9 @@ import ListK
 /// A singly-linked list that is guaranteed to be non-empty.
 public struct NonEmptyList<Element> {
 
-    private let head: Element
+    public let head: Element
 
-    private let tail: List<Element>
+    public let tail: List<Element>
 
     public init(head: Element, tail: List<Element>) {
         self.head = head
