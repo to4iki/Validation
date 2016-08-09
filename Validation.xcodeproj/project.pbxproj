@@ -11,6 +11,7 @@
 		1E1182121D4A50030094814C /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1182071D4A50020094814C /* Validation.framework */; };
 		1E1182171D4A50030094814C /* ValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1182161D4A50030094814C /* ValidationTests.swift */; };
 		1E3D14DB1D4F9D4E00C13888 /* ListK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3D14DA1D4F9D4E00C13888 /* ListK.framework */; };
+		1E3D14E01D4F9E7700C13888 /* NonEmptyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3D14DF1D4F9E7700C13888 /* NonEmptyList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		1E1182161D4A50030094814C /* ValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTests.swift; sourceTree = "<group>"; };
 		1E1182181D4A50030094814C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E3D14DA1D4F9D4E00C13888 /* ListK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ListK.framework; path = Carthage/Build/iOS/ListK.framework; sourceTree = "<group>"; };
+		1E3D14DF1D4F9E7700C13888 /* NonEmptyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonEmptyList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				1E11820C1D4A50020094814C /* Info.plist */,
+				1E3D14DF1D4F9E7700C13888 /* NonEmptyList.swift */,
 				1E11820A1D4A50020094814C /* Validation.h */,
 			);
 			path = Validation;
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E3D14E01D4F9E7700C13888 /* NonEmptyList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
