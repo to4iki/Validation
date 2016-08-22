@@ -18,7 +18,7 @@ extension ValidationOps where Self: Semigroup {
     }
 
     public func failureNel<T>() -> Validation<NonEmptyList<Self>, T> {
-        return .Failure(NonEmptyList(arrayLiteral: self))
+        return .Failure(NonEmptyList(head: self, tail: .None))
     }
 }
 

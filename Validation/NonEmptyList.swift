@@ -80,19 +80,6 @@ extension NonEmptyList: CollectionType {
     public var endIndex: Index { return count }
 }
 
-// MARK: - ArrayLiteralConvertible
-
-extension NonEmptyList: ArrayLiteralConvertible {
-
-    public init(arrayLiteral elements: Element...) {
-        var list = NonEmptyList(head: elements.first!, tail: .None)
-        for e in elements[1..<elements.endIndex].reverse() {
-            list = NonEmptyList(head: e, tail: list)
-        }
-        self = list
-    }
-}
-
 // MARK: Append
 
 public func + <Element>(lhs: NonEmptyList<Element>, x: Element) -> NonEmptyList<Element> {
