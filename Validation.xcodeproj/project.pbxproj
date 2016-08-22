@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		1E11820B1D4A50020094814C /* Validation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E11820A1D4A50020094814C /* Validation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E1182121D4A50030094814C /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1182071D4A50020094814C /* Validation.framework */; };
-		1E1182171D4A50030094814C /* ValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1182161D4A50030094814C /* ValidationTests.swift */; };
+		1E1182171D4A50030094814C /* NonEmptyListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1182161D4A50030094814C /* NonEmptyListTests.swift */; };
 		1E350A541D5A23F500A86B6D /* Semigroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E350A531D5A23F500A86B6D /* Semigroup.swift */; };
 		1E350A561D5A288300A86B6D /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E350A551D5A288300A86B6D /* Validation.swift */; };
 		1E3D14DB1D4F9D4E00C13888 /* ListK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3D14DA1D4F9D4E00C13888 /* ListK.framework */; };
 		1E3D14E01D4F9E7700C13888 /* NonEmptyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3D14DF1D4F9E7700C13888 /* NonEmptyList.swift */; };
 		1E7B239C1D6B324D009B8829 /* ValidationOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B239B1D6B324D009B8829 /* ValidationOps.swift */; };
+		1E7B239E1D6B46FD009B8829 /* ListK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3D14DA1D4F9D4E00C13888 /* ListK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +33,7 @@
 		1E11820A1D4A50020094814C /* Validation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Validation.h; sourceTree = "<group>"; };
 		1E11820C1D4A50020094814C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E1182111D4A50030094814C /* ValidationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValidationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E1182161D4A50030094814C /* ValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTests.swift; sourceTree = "<group>"; };
+		1E1182161D4A50030094814C /* NonEmptyListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonEmptyListTests.swift; sourceTree = "<group>"; };
 		1E1182181D4A50030094814C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E350A531D5A23F500A86B6D /* Semigroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semigroup.swift; sourceTree = "<group>"; };
 		1E350A551D5A288300A86B6D /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E1182121D4A50030094814C /* Validation.framework in Frameworks */,
+				1E7B239E1D6B46FD009B8829 /* ListK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				1E1182181D4A50030094814C /* Info.plist */,
-				1E1182161D4A50030094814C /* ValidationTests.swift */,
+				1E1182161D4A50030094814C /* NonEmptyListTests.swift */,
 			);
 			path = ValidationTests;
 			sourceTree = "<group>";
@@ -142,6 +144,7 @@
 				1E11820D1D4A50030094814C /* Sources */,
 				1E11820E1D4A50030094814C /* Frameworks */,
 				1E11820F1D4A50030094814C /* Resources */,
+				1E7B239F1D6B4704009B8829 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -223,6 +226,20 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
+		1E7B239F1D6B4704009B8829 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ListK.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -241,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E1182171D4A50030094814C /* ValidationTests.swift in Sources */,
+				1E1182171D4A50030094814C /* NonEmptyListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +410,10 @@
 		1E11821F1D4A50030094814C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ValidationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.to4iki.ValidationTests;
@@ -403,6 +424,10 @@
 		1E1182201D4A50030094814C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ValidationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.to4iki.ValidationTests;
