@@ -1,5 +1,6 @@
 # Validation
 
+[![Build Status][status-image]][status-url]
 [![Carthage compatible][carthage-image]][carthage-url]
 [![License][license-image]][license-url]
 
@@ -30,6 +31,9 @@ Inspired by [scalaz/Validation.scala](http://scalaz.github.io/scalaz/scalaz-2.9.
 ## Licence
 
 [MIT](http://to4iki.mit-license.org/)
+
+[status-url]: https://travis-ci.org/to4iki/Validation
+[status-image]: https://travis-ci.org/to4iki/Validation.svg
 
 [carthage-url]: https://github.com/Carthage/Carthage
 [carthage-image]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
